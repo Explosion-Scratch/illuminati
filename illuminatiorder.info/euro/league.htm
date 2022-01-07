@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<title>European League of the illuminati</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<frameset rows="204,*" cols="*" framespacing="0" frameborder="NO" border="0">
+  <frame src="euro.htm" name="topFrame" scrolling="NO" noresize >
+  <frame src="states.htm" name="mainFrame">
+</frameset>
+<noframes><body>
+
+</body></noframes>
+</html>

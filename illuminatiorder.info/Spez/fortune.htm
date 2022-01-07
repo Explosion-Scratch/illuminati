@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Page-Enter" content="revealTrans (Duration=2.0,Transition=22)"> 
+<meta http-equiv="Page-Exit" content="revealTrans (Duration=2.0,Transition=21)"> 
+<title>ACADEMIA OMNILUX</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Ronnie T. Moore -->
+<!-- Web Site:  The JavaScript Source -->
+<!-- Based on code by: Michael Carpenter -->
+<!-- URL:  http://www.michaelcarpenter.net -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var answers = new Array(
+"Without a doubt", 
+"Yes!", 
+"Probably so", 
+"It isn't likely", 
+"it's possible",
+"Absolutely", 
+"Not a chance",
+"Ask again", 
+"No", 
+"I doubt it", 
+"No Way",
+"You shouldn't bet on it",
+"Start it in your spirit",
+"Follow the advise of the specialist",
+"Perhaps you are not ready for it",
+"Focus your sphere",
+"Think about it one more time",
+"Sure",
+"It can't be known",
+"For sure not",
+"Do it like a child",
+"You can bet on it",
+"Wait",
+"It seems to be sure",
+"Do it now",
+"Just remain in silence",
+"That looks like a real surprise",
+"You will find your answer elsewhere",
+"Walk with the time",
+"Doubt it",
+"Pure fortune",
+"Be patient",
+"You will know what is for you",
+"It will happen together with another situation",
+"See what will happen",
+"You will be happy about it",
+"Not good at the moment",
+"Facilitate the tomorrow",
+"Listen what is said",
+"Only if it's done perfect",
+"Do not await more",
+"Avoid the close solution",
+"You will keep the last word",
+"Start slowly",
+"The best solution may not be the first one",
+"S...",
+"It's not in your hand",
+"What?",
+"Enjoy the experience",
+"Be carefull with that",
+"Look for the details",
+"Be carefull what you do"
+
+);
+function fortune() {
+num = Math.round( (answers.length - 1) * Math.random());
+return answers[num];
+}
+//  End -->
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var my_no,count;
+function load() {
+window.defaultStatus="JavaScript Guess-a-Number Game";
+document.game.help.value="Please set range of numbers and press the Start button.";
+document.game.from.focus(); }
+function rnd(scale) {
+var dd=new Date();
+return((Math.round(Math.abs(Math.sin(dd.getTime()))*8.71*scale)%scale)); }
+function range() {
+var to=1+1*document.game.to.value;
+count=0;
+my_no=rnd(to);
+while(my_no<document.game.from.value) {
+my_no=rnd(to); }
+document.game.help.value="Please guess a number, enter it, and press Guess."; }
+function guess() {
+var no=document.game.number.value;
+count++;
+if(no<my_no) document.game.help.value="My number is greater than "+no+".";
+else if(no>my_no) document.game.help.value="My number is less than "+no+".";
+else alert("It takes you "+count+" attempts to guess this number"); }
+// End -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Darren Cummings -->
+<!-- Web Site:  www.spen500.fsnet.co.uk -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var cards = new Array(6);
+var play = 0;
+var cn = 0;
+var ttl = 0;
+cards[1] = "        CARD  ONE        \n  1  3  5  7  9 11 13 15 \n 17 19 21 23 25 27 29 31 \n 33 35 37 39 41 43 45 47 \n 49 51 53 55 57 59 61 63";
+cards[2] = "        CARD  TWO        \n  2  3  6  7 10 11 14 15 \n 18 19 22 23 26 27 30 31 \n 34 35 38 39 42 43 46 47 \n 50 51 54 55 58 59 62 63";
+cards[3] = "       CARD  THREE       \n  4  5  6  7 12 13 14 15 \n 20 21 22 23 28 29 30 31 \n 36 37 38 39 44 45 46 47 \n 52 53 54 55 60 61 62 63";
+cards[4] = "        CARD FOUR        \n  8  9 10 11 12 13 14 15 \n 24 25 26 27 28 29 30 31 \n 40 41 42 43 44 45 46 47 \n 56 57 58 59 60 61 62 63";
+cards[5] = "        CARD FIVE        \n 16 17 18 19 20 21 22 23 \n 24 25 26 27 28 29 30 31 \n 48 49 50 51 52 53 54 55 \n 56 57 58 59 60 61 62 63";
+cards[6] = "        CARD  SIX        \n 32 33 34 35 36 37 38 39 \n 40 41 42 43 44 45 46 47 \n 48 49 50 51 52 53 54 55 \n 56 57 58 59 60 61 62 63";
+var ccol = new Array("","#FF7777","Green","Blue","Gray","Red","Black");
+var knos = new Array("",1,2,4,8,16,32);
+function Nextcard() {
+cn++;
+if(cn == 7)
+End();
+else {
+document.x.card.value=cards[cn];
+document.x.card.style.backgroundColor=ccol[cn];
+document.x.text.value="Is your number on the card above?";
+   }
+}
+function Restart() {
+play=0;
+cn=0;
+ttl=0;
+document.x.card.style.backgroundColor = "#FFFFFF";
+document.x.card.style.color = "#000000";
+document.x.card.value = "Think of a number between 1 and 63. Six cards will be displayed. After the last one, your number is revealed.";
+document.x.text.value = "Click Start";
+document.x.stbt.value = "Start";
+}
+function Yes() {
+ttl = ttl + knos[cn];
+Nextcard();
+}
+function Start() {
+document.x.card.style.color = "White";
+document.x.stbt.value = "Restart";
+play = 1;
+Nextcard();
+}
+function End() {
+play = 2;
+if(ttl < 10)
+ttl = " " + ttl;
+ttl = " " + ttl;
+var one = ttl.charAt(1);
+var two = ttl.charAt(2);
+document.x.card.value = "\n   THE NUMBER YOU WERE   \n    THINKING OF WAS :    \n      -- [ "+one+" "+two+" ] --";
+document.x.card.style.color = "Red";
+document.x.text.value = "Click Restart to play again";
+}
+function click() {
+event.cancelBubble = true;
+event.returnValue = false;
+}
+document.oncontextmenu = click;
+//  End -->
+</script>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Harrington;
+	color: #FF9966;
+}
+body {
+	background-color: #000000;
+}
+-->
+</style></head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<BODY onLoad="load()">
+<div align="center">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<center>
+<form>
+Your question:  <input type=text name=question size=40>
+<input type=button name=ask value="Ask" onClick="if (this.form.question.value!='') this.form.answer.value = fortune();"><br>
+Your fortune teller says:  <input type=text name=answer size=40>
+</form>
+</center>
+
+<p>
+  <center>
+  <p>&nbsp;</p>
+  </center>
+<p align="center">
+<p align="center">
+<p align="center">
+<CENTER>
+<FORM name=game>
+<TABLE border=3>
+<TR>
+<TD align=center colspan=2>Range of numbers</TD>
+<TD align=center rowspan=2><input type=button value=" Start " onclick="range()"></TD>
+</TR>
+<TR>
+<TD align=center>From:<br><input type=text name=from size=10></TD>
+<TD align=center>To:<br><input type=text name=to size=10></TD>
+</TD>
+<TR>
+<TD></TD>
+</TR>
+<TR>
+<TD align=center colspan=3><input type=text name=help size=70></TD>
+</TR>
+<TR>
+<TD></TD>
+</TR>
+<tr>
+  <td align=right colspan=3>Seer, Guess Your Number...
+    <input type=text name=number size=10><input type=button value=" Guess " onclick="guess()"></TD></TR>
+</TABLE>
+</FORM>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<form name="x">
+  <center>
+    <table border="0">
+      <tr>
+        <td width="255"><center>
+            <textarea name="card" rows="5" cols="25">Think of a number between 1 and 63. Six cards will be displayed. After the last one, your number is revealed.
+</textarea>
+        </center></td>
+      </tr>
+      <tr>
+        <td><center>
+            <input type="text" size="36" name="text" value="Click Start" style="FONT-SIZE: 8pt">
+        </center></td>
+      </tr>
+      <tr>
+        <td><center>
+            <input type="button" value="YES" onclick="if(play==1) Yes()" style="FONT-SIZE: 8pt">
+            <input type="button" value="NO" onclick="if(play==1) Nextcard()" style="FONT-SIZE: 8pt">
+            <input type="button" name="stbt" value=" Start " onclick="if(play==0) Start(); else Restart()" style="FONT-SIZE: 8pt">
+        </center></td>
+      </tr>
+    </table>
+    <center>
+    </center>
+  </center>
+</form>
+<p>&nbsp;</p>
+</CENTER>
+
+</body>
+</html>

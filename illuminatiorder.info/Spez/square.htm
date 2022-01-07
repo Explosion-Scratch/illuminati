@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Page-Enter" content="revealTrans (Duration=2.0,Transition=22)"> 
+<meta http-equiv="Page-Exit" content="revealTrans (Duration=2.0,Transition=21)"> 
+<title>ACADEMIA OMNILUX</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Original:  Roger Zeitel (rzeitel@mars.superlink.net) -->
+<!-- Web Site:  http://mars.superlink.net/rzeitel/games.html -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function initArray() {
+this.length = initArray.arguments.length
+for (var i = 0; i < this.length; i++)
+this[i+1] = initArray.arguments[i]
+}
+var pos = new initArray(9,9,9,9,9,9,9,9,9);
+var nummoves= 0;
+function random() {
+today = new Date();
+num = today.getTime();
+num = Math.round(Math.abs(Math.sin (num)*1000000)) % 9;
+return num;
+}
+function display(pos) {
+for (var i=0; i<9; i++)  {
+document.forms[0].elements[i].value = pos[i];
+}
+document.forms[0].moves.value= nummoves;
+win();
+}
+function move(num) {
+if (num < 8 && pos[num+1]==0) {
+pos[num+1]= pos[num];
+pos[num]= 0;
+nummoves++;
+}
+else if (num > 0 && pos[num-1]==0) {
+pos[num-1]= pos[num];
+pos[num]= 0;
+nummoves++;
+} 
+else if (num > 2 && pos[num-3]==0) {
+pos[num-3]= pos[num];
+pos[num]= 0;
+nummoves++;
+}
+else if (num < 6 && pos[num+3]==0 ) {
+pos[num+3]= pos[num];
+pos[num]= 0;
+nummoves++;
+}
+display(pos);
+}
+function win() {     
+if (pos[0]== 1 & pos[1]== 2 & pos[2]== 3 & pos[3]== 4 & 
+pos[4]== 5 & pos[5]== 6 & pos[6]== 7 & pos[7]== 8 & pos[8]== 0) {
+if (confirm('You did it! Do you want to restart?')) newgame();
+   }
+}
+function newgame() {
+var x=1;
+for (var i=0; i<9; i++) {
+pos[i]=9;
+}
+for (var i=0; i<9;i++) {
+randomnum=random();
+if (randomnum==9) randomnum=8;
+x=1;
+for (var j=0; j<9; j++)  {
+if (j==i)
+continue;
+if (randomnum==pos[j]) {
+x=0;
+break;
+   }
+}
+if (x==0) {
+i--;
+continue;
+}
+pos[i]=randomnum;
+}
+nummoves=0;
+display(pos);   
+}   
+// End -->
+</SCRIPT>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Harrington;
+	color: #FF9966;
+}
+body {
+	background-color: #000000;
+}
+.Stil1 {font-size: 14px}
+-->
+</style></head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<BODY onLoad="window.newgame()">
+<div align="center">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<CENTER>
+<h1 align=center class="Stil1">Magic Squares</h1>
+<p align=center class="Stil1">&nbsp;</p>
+<p>
+<FORM>
+<table border=0 celpadding=0 cellspacing=10>
+<tr><td>
+<input type="button" value=" 1 " onClick="window.move(0)">
+<input type="button" value=" 2 " onClick="window.move(1)">
+<input type="button" value=" 3 " onClick="window.move(2)"><br>
+<input type="button" value=" 4 " onClick="window.move(3)">
+<input type="button" value=" 5 " onClick="window.move(4)">
+<input type="button" value=" 6 " onClick="window.move(5)"><br>
+<input type="button" value=" 7 " onClick="window.move(6)">
+<input type="button" value=" 8 " onClick="window.move(7)">
+<input type="button" value=" 0 " onClick="window.move(8)"><p>
+</td></td>
+<td valign=top>
+Put the numbers in order so that they read 1-8. <br>
+The 0 is the 'empty' place.  Click on any number <br>
+next to 0 and they will switch places.
+</td>
+</tr>
+<tr><td align=center>
+# of moves:<br>
+<input name="moves" size=7 value="0"> <p> 
+</td>
+<td align=center><br>
+<input type="submit" value="New Game" onClick="window.newgame()">
+</td>
+</tr>
+</table>
+</FORM>
+</CENTER>
+
+</body>
+</html>

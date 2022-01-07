@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Page-Enter" content="revealTrans (Duration=2.0,Transition=22)"> 
+<meta http-equiv="Page-Exit" content="revealTrans (Duration=2.0,Transition=21)"> 
+<title>ACADEMIA OMNILUX</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Colin Russell (niloc12@hotmail.com) -->
+<!-- Web Site:  http://www.geocities.com/niloc12.geo -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var wt = ""; //temporary holder
+var et = ""; //encoded text
+var all = "";
+var all2 = "";
+var alpha2 = "abcdefghijklmnopqrstuvwxyz";
+var a = "a"; var b = "b"; var c = "c"; var d = "d";
+var e = "e"; var f = "f"; var g = "g"; var h = "h";
+var i = "i"; var j = "j"; var k = "k"; var l = "l";
+var m = "m"; var n = "n"; var o = "o"; var p = "p";
+var q = "q"; var r = "r"; var s = "s"; var t = "t";
+var u = "u"; var v = "v"; var w = "w"; var x = "x";
+var y = "y"; var z = "z";
+var alpha = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+
+function encode() {
+wt = "";
+et = "";
+all = "";
+var theText = document.f1.ta1.value.toLowerCase();
+var num = document.f1.tb1.value;
+i2 = 0;
+for (i = 0; i < num; i++) { 
+i2 = i2 + 1;
+if (i2 == 26) i2 = 0;
+}
+a = alpha[i2]; i2 = next(i2);
+b = alpha[i2]; i2 = next(i2);
+c = alpha[i2]; i2 = next(i2);
+d = alpha[i2]; i2 = next(i2);
+e = alpha[i2]; i2 = next(i2);
+f = alpha[i2]; i2 = next(i2);
+g = alpha[i2]; i2 = next(i2);
+h = alpha[i2]; i2 = next(i2);
+i = alpha[i2]; i2 = next(i2);
+j = alpha[i2]; i2 = next(i2);
+k = alpha[i2]; i2 = next(i2);
+l = alpha[i2]; i2 = next(i2);
+m = alpha[i2]; i2 = next(i2);
+n = alpha[i2]; i2 = next(i2);
+o = alpha[i2]; i2 = next(i2);
+p = alpha[i2]; i2 = next(i2);
+q = alpha[i2]; i2 = next(i2);
+r = alpha[i2]; i2 = next(i2);
+s = alpha[i2]; i2 = next(i2);
+t = alpha[i2]; i2 = next(i2);
+u = alpha[i2]; i2 = next(i2);
+v = alpha[i2]; i2 = next(i2);
+w = alpha[i2]; i2 = next(i2);
+x = alpha[i2]; i2 = next(i2);
+y = alpha[i2]; i2 = next(i2);
+z = alpha[i2]; i2 = next(i2);
+var all = a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z;
+all = all.split("");
+encode2(all);
+}
+function next(x) {
+if (x == 25) x = -1;
+x = x + 1;
+return x;
+}
+function encode2(all2) {
+var temp2 = document.f1.ta1.value.toLowerCase();
+temp2 = temp2.split("");
+var q = 0;
+while (q < temp2.length) { 
+wt = temp2[q];
+var where = alpha2.indexOf(wt);
+if (where == -1) { et += wt; }
+if (where != -1) { et += all2[where]; }
+q = q + 1;
+}
+document.f1.ta1.value = et;
+}
+function decode() {
+wt = "";
+et = "";
+all = "";
+all3 = "";
+var theText = document.f1.ta1.value.toLowerCase();
+var num = document.f1.tb1.value;
+i2 = 0;
+for (i = 0; i < num; i++) {
+i2 = i2 + 1;
+if (i2 == 26) i2 = 0;
+}
+a = alpha[i2]; i2 = next(i2);
+b = alpha[i2]; i2 = next(i2);
+c = alpha[i2]; i2 = next(i2);
+d = alpha[i2]; i2 = next(i2);
+e = alpha[i2]; i2 = next(i2);
+f = alpha[i2]; i2 = next(i2);
+g = alpha[i2]; i2 = next(i2);
+h = alpha[i2]; i2 = next(i2);
+i = alpha[i2]; i2 = next(i2);
+j = alpha[i2]; i2 = next(i2);
+k = alpha[i2]; i2 = next(i2);
+l = alpha[i2]; i2 = next(i2);
+m = alpha[i2]; i2 = next(i2);
+n = alpha[i2]; i2 = next(i2);
+o = alpha[i2]; i2 = next(i2);
+p = alpha[i2]; i2 = next(i2);
+q = alpha[i2]; i2 = next(i2);
+r = alpha[i2]; i2 = next(i2);
+s = alpha[i2]; i2 = next(i2);
+t = alpha[i2]; i2 = next(i2);
+u = alpha[i2]; i2 = next(i2);
+v = alpha[i2]; i2 = next(i2);
+w = alpha[i2]; i2 = next(i2);
+x = alpha[i2]; i2 = next(i2);
+y = alpha[i2]; i2 = next(i2);
+z = alpha[i2]; i2 = next(i2);
+var all = a+b+c+d+e+f+g+h+i+j+k+l
++m+n+o+p+q+r+s+t+u+v+w+x+y+z;
+all3 = all;
+all = all.split("");
+decode2(all3);
+}
+function decode2(all2) { 
+var alpha2 = "abcdefghijklmnopqrstuvwxyz";
+alpha2 = alpha2.split("");
+var temp2 = document.f1.ta1.value.toLowerCase();
+temp2 = temp2.split("");
+var v = 0;
+while (v < temp2.length) {
+wt = temp2[v];
+var where = all2.indexOf(wt);
+if (where == -1) { et += wt; }
+if (where != -1) { et += alpha2[where]; }
+v = v + 1;
+}
+document.f1.ta1.value = et;
+}
+//  End -->
+</script>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Harrington;
+	color: #FF9966;
+}
+body {
+	background-color: #000000;
+}
+-->
+</style></head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<body>
+<div align="center">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<center>
+<form name=f1>
+<textarea name=ta1 cols=40 rows=20>
+</textarea>
+<p>
+Key Value:  <input type="text" size=10 name="tb1" value=""><br>
+<input type="button" value="Encode Message" onClick="encode(); return false;">
+<input type="button" value="Decode Message" onClick="decode(); return false;">
+</form>
+</center>
+
+<p>
+<p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Entrance</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="illuminati.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(v2.jpg);
+	background-repeat: no-repeat;
+	margin-right: 230px;
+	background-color: #000000;
+}
+-->
+</style></head>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+
+//  Get your very own Gate Keeper from Professional Web Design  
+//  http://junior.apk.net/~jbarta/weblinks/gate_keeper/         
+
+function goForit() {
+var location;
+var password;
+var pass1 = "human"; // place password here
+password=this.document.testform.inputbox.value
+
+if (password==pass1) {
+  window.location= "index23.html"; // file to open if password is correct
+} else {
+  window.location= "error.html"; // file to load if password is incorrect
+}
+fetch(location)
+theKeeper=window.close()
+}
+function fetch(location) {
+var root;
+if (opener.closed) {
+root=window.open('toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,copyhistory=no');
+root.location.href = location;
+} else {
+opener.location.href = "index23.html";
+   }
+}
+// End -->
+</SCRIPT>
+
+</head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<BODY onLoad="top.window.focus()">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD ROWSPAN=2 WIDTH=50%>
+<TD WIDTH=50% ALIGN=CENTER VALIGN=MIDDLE>
+  <p><FONT color="#FFFF00" SIZE=3 FACE="Harrington"><B>"What speaks with one voice, yet walks on four feet in the morning, two feet at noon and three feet in the evening?"</B></FONT><font color="#FFFF00"><BR>
+    </font></p>
+  <p>&nbsp;  </p>
+<TR>
+<TD WIDTH=50% ALIGN=CENTER VALIGN=BOTTOM>
+<CENTER>
+<FORM NAME="testform">
+<INPUT TYPE="text" NAME="inputbox" VALUE="" size=20>
+<INPUT TYPE="button" NAME="button" Value="Submit Password" onClick="goForit(this.form)">
+<P><FONT SIZE=1 FACE="COMIC SANS MS"><A HREF="http://www.illluminatiorder.info/index23.html" TARGET="_blank"></A></FONT>
+</FORM>
+</CENTER>
+</TABLE>
+
+<p><center>
+<font face="arial, helvetica" size="-2"><br>
+</font>
+</center><p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Unbenanntes Dokument</title>
+<style type="text/css">
+<!--
+body,td,th {
+	color: #CC9900;
+}
+body {
+	background-color: #000000;
+}
+.Stil2 {font-size: 9px}
+-->
+</style></head>
+<script type="text/javascript">
+function click (e) {
+  if (!e)
+    e = window.event;
+  if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+    if (window.opera)
+      window.alert("Sorry: This function is deactivated.");
+    return false;
+  }
+}
+if (document.layers)
+  document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown = click;
+document.oncontextmenu = click;
+</script>
+<body>
+<div align="right" class="Stil2">Copyright <strong>&copy;</strong> 2017 - Academia Omnilvx &reg;</div>
+ &reg;
+</body>
+</html>
